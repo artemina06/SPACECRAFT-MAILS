@@ -6,15 +6,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     body { text-align: center; margin: 20px; font-family: 'Montserrat', sans-serif; background-color: #0c3a5e; color: #363333; }
-    .container {margin: 30px; position: relative; max-width: 800px;margin: auto; background: #fff; padding: 20px; border-radius: 8px; }
+    .container {margin: 30px; position: relative; max-width: 800px;margin: auto; background: #fff; padding: 20px; border-radius: 8px; z-index: -20; }
     .tlg {display:absolute; height:  100px;}
     .header { text-align: center; padding: 20px; }
     .header h1 { margin: 0; color: #0c3a5e; font-size: 2.5rem; }
     .header h2 { margin: 0; color: #126ead; font-size: 1.5rem; font-weight: 300; }
     .content { text-align: center; margin: auto; font-size: 1rem; line-height: 1.5; color: #0c3a5e;}
-    .content p {text-align: center; margin: auto; max-width: 650px;}
-
-    .sponsor {background-color: #126ead; padding: 60px ; border-radius: 10px; }
+    .content p {text-align: center; margin: auto; max-width: 650px; z-index: 3;}
+    .sponsor {background-color: #126ead; padding: 60px ; border-radius: 10px; margin: 10px; }
     .sponsor h1 { color: rgb(189, 203, 231);}
     .sponsor p {color: rgb(227, 232, 245);}
     .name {color: #ffffff ; font-size: 70px;}
@@ -25,9 +24,9 @@
     .feature h3 { font-size: 1rem; color: #000; }
     .feature p { font-size: 0.9rem; color: #8d8d8d; }
     .cta { text-align: center; margin: 20px 0; }
-    .cta a { text-decoration: none; background-color: #0c3a5e; color: #ffffff; padding: 10px 20px; border-radius: 5px; font-size: 1rem; }
+    .cta a { text-decoration: solid; background-color: #0c3a5e; color: #ffffff; padding: 20px; border-radius: 5px; font-size: 1rem; }
     
-    .Help {display: flex; justify-content: space-around; margin: 20px 0;}
+    .Help {display: flex; justify-content: space-around; margin: 10px;}
     .ONEH {text-align: center; width: 40%; }
     .ONEH img { max-width: 64px; }
     .ONEH h3 { font-size: 1rem; color: #000; }
@@ -38,7 +37,20 @@
     .logo {height: 200px; padding-right: 20px;}
     .dear {color: #126ead; margin: auto; text-align: center;}
     
-   
+    .button{padding: 30px;
+      text-decoration: solid;
+      clip-path:polygon(
+    0 20%,
+    10% 0,
+    97% 0,
+    100% 10%,
+    100% 80%,
+    90% 100%,
+    3% 100%,
+    0% 90%
+  )
+  }
+  .BG {position: absolute; width: 820px; left: 10px; z-index: -15;}
   </style>
 </head>
 
@@ -46,18 +58,19 @@
 <body>
     
   <div class="container">
-    <img src="images/1631367841558.jpg" class="tlg" style="position: absolute; left: 40px;">
-    <img src="images/326234335_5726307667447520_5874585788824993760_n.jpg" class="tlg" style="position: absolute ; right:20px;">
+    <img src="images/BG mail.svg" class="BG">
+    <img src="https://raw.githubusercontent.com/artemina06/SPACECRAFT-MAILS/refs/heads/main/images/1631367841558.jpg" class="tlg" style="position: absolute; left: 40px;">
+    <img src="https://raw.githubusercontent.com/artemina06/SPACECRAFT-MAILS/refs/heads/main/images/326234335_5726307667447520_5874585788824993760_n.jpg" class="tlg" style="position: absolute ; right:20px;">
     <div class="header">
         <br><br><br>
-        <img src="images/8f59846d-88c9-45cc-a080-de4df3082777.png" class="logo">
+        <img src="https://raw.githubusercontent.com/artemina06/SPACECRAFT-MAILS/refs/heads/main/images/8f59846d-88c9-45cc-a080-de4df3082777.png" class="logo">
       <h1>SpaceCraft</h1>
       <h2>Sky is the limit</h2>
     </div>
 
     <div class="content">
         <br>
-      <p>un club scientifique dynamique et innovant de l’École Polytechnique d'Architecture et d'Urbanisme <strong class="bold">(EPAU)</strong>. 
+      <p style="z-index: +12;">un club scientifique dynamique et innovant de l’École Polytechnique d'Architecture et d'Urbanisme <strong class="bold">(EPAU)</strong>. 
         Nous sommes un groupe d’étudiants <strong>passionnés par l'architecture, l'urbanisme et les nouvelles technologies,</strong>  et nous avons pour ambition de contribuer à l’évolution de ces disciplines grâce à des initiatives audacieuses et collaboratives.</p>
       <p></p>
       <br><br>
@@ -74,8 +87,8 @@
             et nous souhaitons vivement explorer <strong>une opportunité de collaboration</strong>  avec vous. Nous avons également remarqué que, jusqu’à présent, vous n’avez pas encore eu l’opportunité de collaborer avec <strong>un club d’architecture.</strong>  </p>
          <br>
         </div></div>
-        <br>
-    <h1>Nos divers evenements <br>scientifique et culturelles</h1> <br>
+        <br><br><br>
+    <h1 style="color: #0c3a5e;">Nos divers evenements <br>scientifique et culturelles</h1> <br>
         <div class="features">
           <div class="feature">
             <img src="images/paw.png" alt="Wildlife">
@@ -83,7 +96,7 @@
             <p>Conférences et ateliers thématiques</p>
           </div>
           <div class="feature">
-            <img src="images/sun.png" alt="Climate">
+            <img src="images/sun.png" alt="Climate" style="height: 64px;">
             <h3>EXPERIENCING</h3>
             <p>Projets pratiques rassemblant étudiants, professionnels et passionnés</p>
           </div>
@@ -95,29 +108,29 @@
         </div>
         <br>
         <p class="content">Ces activités visent à stimuler l’innovation, encourager l’échange d’idées et préparer la prochaine génération de leaders dans les domaines de l’architecture, de l’urbanisme et des nouvelles technologies</p>
-        <br>
+        <br><br><br><br>
         <div class="cta">
-          <a href="https://www.instagram.com/spacecraft_epau?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MORE OF OUR PERSONALITY</a>
+          <a style="margin-top: 21.44px;" class="button" href="https://www.instagram.com/spacecraft_epau?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">MORE OF OUR PERSONALITY</a>
         </div>  
         <br><br><br><br><br>
         
-    <div style="padding: 20px 10px; color: #fff ;background-color: #126ead; border-radius: 10px;"><h1>comment vous pouvez <br> <A style="font-size: 60px;">nous aidez !!</A></h1> <br>
-        <div class="Help">
+    <div style="padding: 60px; color: #c7e0f3 ;background-color: #126ead; border-radius: 10px;"><h1 style="color: white;">comment vous pouvez <br> <A style="font-size: 60px;">nous aidez !!</A></h1> <br>
+        <br><div class="Help">
           <div class="ONEH">
-            <img src="" alt="Wildlife">
+            <img src="images/frais.png" alt="Wildlife">
                 <h3 style="color: white;">FRAIS</h3>
-                <p style="color: white;">Couvrir les frais liés à l’organisation de nos événements (logistique, communication, déplacements, etc.),</p>
+                <p style="color: #c7e0f3;">Couvrir les frais liés à l’organisation de nos événements (logistique, communication, déplacements, etc.),</p>
           </div>
           <div class="ONEH" style="color: white; font-style: bold;">
-            <img src="" alt="Climate">
+            <img src="images/concretisation.png" alt="Climate">
             <h3 style="color: white;">CONCRETISATION</h3>
-            <p style="color: white;">Offrir à nos membres les ressources nécessaires pour concrétiser leurs initiatives ambitieuses.</p>
+            <p style="color: #c7e0f3;">Offrir à nos membres les ressources nécessaires pour concrétiser leurs initiatives ambitieuses.</p>
           </div>
         </div>
             <br>
             <p style="max-width: 200 px;">Votre contribution jouerait un rôle déterminant dans la réussite de ces projets, et nous serions honorés de pouvoir compter sur votre soutien</p>
     </div>
-        <p class="content">
+        <p class="content" style="width: 200 px;">
                 <br><br><br>
                 Nous serions également ravis de vous présenter en détail nos projets, ainsi que les avantages concrets que ce partenariat pourrait offrir à votre organisation, 
                 notamment en termes de visibilité et de positionnement stratégique auprès d’un public jeune et engagé. À cette fin, nous proposons qu’un membre de notre équipe 
@@ -131,16 +144,17 @@ Nous espérons vivement pouvoir collaborer avec vous et créer ensemble un parte
             <br>
           
   
-</div>
+</div><br>
   <div class="footer">
     <p>&copy; 2024 SpaceCraft. All rights reserved.</p>
     <p><a style="font-size: 30px ;" href="mailto:info@company.com">info@company.com</a> </p>
     <br>
-    <p> <a href="https://www.facebook.com/@spacecraft.MAARIFA/"><img src="images/facebook2x.png" ></a>
-        <a href="https://www.linkedin.com"><img src="images/instagram2x.png"></a>
-        <a href="https://www.instagram.com"><img src="images/linkedin2x.png"></a>
+    <p> 
+        <a href="https://www.instagram.com/spacecraft_epau?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="images/instagram2x.png"></a>
+        <a href="https://www.facebook.com/@spacecraft.MAARIFA/" style="padding-left: 15px;"><img src="images/facebook2x.png" ></a>
+        <a href="https://www.linkedin.com/company/spacecraft-section"><img src="images/linkedin2x.png"></a>
     </p>
-    <br><br><br><br>
+    <br><br><br>
     <p>GREAT THANKS</p><br>
 </div>
 </body>
